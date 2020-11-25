@@ -104,7 +104,7 @@ private static final Random RANDOM = new Random();
 
 ## 구현할 기능 목록
 - Random을 구현하고, 게임 시작할 때 1에서 9까지 서로 다른 임의의 수 3개를 생성한다.
-- 사용자의 입력받는다
+- 사용자의 입력을 받는다
   - 비정상적인 입력에는 IllegalArgumentException 발생시킨다.
 - 사용자의 입력에 대한 힌트를 제공한다
   - 정답인 경우 게임의 재시작/종료를 구분하는 1과 2중 하나의 수를 입력받는다.
