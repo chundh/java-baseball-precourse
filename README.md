@@ -102,6 +102,13 @@ private static final Random RANDOM = new Random();
   - [AngularJS Commit Message Conventions](https://gist.github.com/stephenparish/9941e89d80e2bc58a153) 참고해 commit log를 남긴다.
 - [프리코스 과제 제출 문서](https://github.com/woowacourse/woowacourse-docs/tree/master/precourse) 절차를 따라 미션을 제출한다.
 
+## 구현할 기능 목록
+- Random을 구현하고, 게임 시작할 때 1에서 9까지 서로 다른 임의의 수 3개를 생성한다.
+- 사용자의 입력받는다
+  - 비정상적인 입력에는 IllegalArgumentException 발생시킨다.
+- 사용자의 입력에 대한 힌트를 제공한다
+  - 정답인 경우 게임의 재시작/종료를 구분하는 1과 2중 하나의 수를 입력받는다.
+
 <br>
 
 ## 📝 License
