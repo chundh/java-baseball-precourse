@@ -1,14 +1,15 @@
 package baseball;
 
 public class CheckInput {
+    private static CheckInput checkInput = new CheckInput();
     String input;
-    private void checkInputLength(String input) {
+    private void checkInputLength() {
         // input 데이터가 세 자릿수인지 확인
         if (input.length() != 3) {
             throw new IllegalArgumentException("3자리 숫자로 입력해주세요");
         }
     }
-    private void checkInputValue(String input){
+    private void checkInputValue(){
         // 숫자가 아닌 다른 데이터가 있는지 확인
         for (int index = 0; index < input.length(); index++) {
             char tempChar = input.charAt(index);
@@ -16,7 +17,7 @@ public class CheckInput {
                 throw new IllegalArgumentException("1~9까지의 숫자로만 구성된 값을 입력해주세요");
         }
     }
-    private void checkInputDuplicate(String input){
+    private void checkInputDuplicate(){
         // 각 자릿수에 중복되는 값이 있는지 확인
         int[] useNumber = new int[10];
         for (int index = 0; index < input.length(); index++) {
@@ -29,11 +30,16 @@ public class CheckInput {
         }
     }
     public void check(){
-        checkInputLength(input);
-        checkInputValue(input);
-        checkInputDuplicate(input);
+        checkInputLength();
+        checkInputValue();
+        checkInputDuplicate();
     }
     public void setInput(String input) {
         this.input = input;
+    }
+    private CheckInput() {}
+
+    public static CheckInput getInstance() {
+        return checkInput;
     }
 }
